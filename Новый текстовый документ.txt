@@ -30,35 +30,40 @@
             }else{
             console.log("не подходит")
             }
-            for(let x=0;x<arr.length;x+=2){
-                if(txt1.value===arr[x]){
+            for(let x=3;x<arr.length;x+=5){
+                if(txt1.value==arr[x]){
                 console.log("Имя уже занято")
                 break
                 }else{
                 console.log("Имя подходит")
                 }
             }
-            arr.push(txt3.value)
-            arr.push(txt4.value)
-            arr.push(txt5.value)
-            arr.push(txt1.value)
-            arr.push(txt2.value)
+            let User =new Object()
+             User ={
+            name: document.getElementById("txt3").value,
+            surname: document.getElementById("txt4").value,
+            age: document.getElementById("txt5").value,
+            login: document.getElementById("txt1").value,
+            password: document.getElementById("txt2").value
+            }
+            arr.push(User)
         }
+        
         btn2.onclick = function(){
             console.log(arr)  
         }
     </script>
         <div>
             <H1>Enter in your social network</H1>
-        <textarea name="Login" id="txt3"></textarea>
-        <textarea name="Password" id="txt4"></textarea>
+        <textarea name="Login" id="txt7"></textarea>
+        <textarea name="Password" id="txt6"></textarea>
         <button id="btn3">Check</button>
         </div>
         <script>
             btn3.onclick =function(){
                 for(let y=0;y<arr.length;y+=2){
                     for(let z =1;z<arr.length;z+=2){
-                if(txt3.value===arr[y] && txt4.value===arr[z]){
+                if(txt6.value===arr[y] && txt7.value===arr[z]){
                     console.log("Такой пользователь существует")
                     break
                     }else{
@@ -68,5 +73,7 @@
             }
         }
         </script>
+       
+          </script>
 </body>
 </html>
